@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNS記事</title>
+    <style>
+        /* 全体のレイアウト */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ヘッダー */
+        .header {
+            background-color: #003a5e;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .logo h1 {
+            font-size: 30px;
+            margin: 0;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav ul li {
+            margin-right: 30px;
+        }
+
+        .nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* メインコンテンツ */
+        .main-content {
+            max-width: 1100px;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .article {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        .article h2 {
+            font-size: 26px;
+            margin-bottom: 10px;
+            color: #003a5e;
+        }
+
+        .article .date {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .article .content {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .article .content p {
+            margin-bottom: 20px;
+        }
+
+        /* フッター */
+        .footer {
+            background-color: #003a5e;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* リスポンシブ */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav ul {
+                flex-direction: column;
+            }
+
+            .nav ul li {
+                margin-bottom: 10px;
+            }
+
+            .main-content {
+                padding: 15px;
+            }
+
+            .article h2 {
+                font-size: 22px;
+            }
+
+            .article .content {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>SNS記事</h1>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="#">最新の記事</a></li>
+                <li><a href="#">SNSの利用者数</a></li>
+                <li><a href="#">誹謗中傷によるグラフ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+    
+        <article class="article">
+            <a href="index2.html">
+                <h2>SNS記事開設【僕から一言】</h2>
+            </a>
+            <p class="date">2024年12月1日 23:11</p>
+            <div class="content">
+                <p>ご覧いただきありがとうございます。これから毎日SNSに関しての記事を書いていきたいと思います。</p>
+                <p>この連載では、SNSが私たちの日常に与える影響について、いくつかの切り口から分析していきます。SNSの利用者数や、その利用者の心理、そしてSNSが引き起こす社会的影響について深堀りしていく予定です。</p>
+                <p>今後ともよろしくお願いします。</p>
+            </div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 SNS記事 <a href="#"></a></p>
+    </footer>
+</body>
+</html>
+
