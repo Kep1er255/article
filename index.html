@@ -35,9 +35,8 @@
             list-style: none;
             padding: 0;
             margin: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            display: flex; /* 常に横並び */
+            gap: 20px; /* 各項目の間隔 */
         }
 
         .nav ul li {
@@ -56,49 +55,49 @@
 
         /* メインコンテンツ */
         .main-content {
-            max-width: 95%;
-            margin: 20px auto;
+            max-width: 1100px;
+            margin: 40px auto;
             background-color: #fff;
-            padding: 15px;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .article {
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             border-bottom: 1px solid #ddd;
-            padding-bottom: 15px;
+            padding-bottom: 20px;
         }
 
         .article h2 {
-            font-size: 20px;
+            font-size: 26px;
             margin-bottom: 10px;
             color: #003a5e;
         }
 
         .article .date {
             color: #999;
-            font-size: 12px;
-            margin-bottom: 10px;
+            font-size: 14px;
+            margin-bottom: 15px;
         }
 
         .article .content {
-            font-size: 16px;
+            font-size: 18px;
             color: #555;
         }
 
         .article .content p {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         /* フッター */
         .footer {
             background-color: #003a5e;
             color: #fff;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
-            font-size: 12px;
-            margin-top: 20px;
+            font-size: 14px;
+            margin-top: 40px;
         }
 
         .footer a {
@@ -110,37 +109,42 @@
             text-decoration: underline;
         }
 
-        /* スマホ用の調整 */
+        /* リスポンシブ */
         @media (max-width: 768px) {
             .header {
-                flex-direction: column;
-                align-items: flex-start;
+                flex-wrap: wrap; /* ヘッダー全体を折り返し可能に */
                 gap: 10px;
             }
 
-            .header .logo h1 {
-                font-size: 20px;
+            .header .logo {
+                width: 100%; /* ロゴを横幅いっぱいにする */
+                text-align: center;
             }
 
             .nav ul {
-                flex-direction: column;
-                gap: 5px;
+                flex-wrap: nowrap; /* 横並びを維持 */
+                overflow-x: auto; /* 横スクロールを許可 */
+                gap: 15px;
+            }
+
+            .nav ul li a {
+                font-size: 12px;
             }
 
             .main-content {
-                padding: 10px;
+                padding: 15px;
             }
 
             .article h2 {
-                font-size: 18px;
+                font-size: 22px;
             }
 
             .article .content {
-                font-size: 14px;
+                font-size: 16px;
             }
 
             .footer {
-                font-size: 10px;
+                font-size: 12px;
                 padding: 10px;
             }
         }
@@ -177,3 +181,4 @@
     </footer>
 </body>
 </html>
+
