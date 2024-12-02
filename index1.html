@@ -23,7 +23,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .header .logo h1 {
@@ -109,7 +108,7 @@
             text-decoration: underline;
         }
 
-        /* リスポンシブ */
+        /* リスポンシブ対応 */
         @media (max-width: 768px) {
             .header {
                 flex-direction: column;
@@ -117,23 +116,14 @@
             }
 
             .nav ul {
-                flex-direction: column;
+                flex-direction: row;
+                flex-wrap: nowrap; /* 横並びを維持 */
+                justify-content: center;
+                overflow-x: auto; /* 横スクロールを許可 */
             }
 
             .nav ul li {
-                margin-bottom: 10px;
-            }
-
-            .main-content {
-                padding: 15px;
-            }
-
-            .article h2 {
-                font-size: 22px;
-            }
-
-            .article .content {
-                font-size: 16px;
+                margin-right: 10px;
             }
         }
     </style>
@@ -154,7 +144,6 @@
     </header>
 
     <main class="main-content">
-    
         <article class="article">
             <a href="index2.html">
                 <h2>SNS記事開設【僕から一言】</h2>
@@ -166,7 +155,6 @@
                 <p>今後ともよろしくお願いします。</p>
             </div>
         </article>
-
     </main>
 
     <footer class="footer">
@@ -174,4 +162,3 @@
     </footer>
 </body>
 </html>
-
