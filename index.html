@@ -19,7 +19,7 @@
         .header {
             background-color: #003a5e;
             color: #fff;
-            padding: 20px;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -27,7 +27,7 @@
         }
 
         .header .logo h1 {
-            font-size: 30px;
+            font-size: 24px;
             margin: 0;
         }
 
@@ -36,16 +36,18 @@
             padding: 0;
             margin: 0;
             display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .nav ul li {
-            margin-right: 30px;
+            margin: 0;
         }
 
         .nav ul li a {
             color: #fff;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .nav ul li a:hover {
@@ -54,86 +56,92 @@
 
         /* メインコンテンツ */
         .main-content {
-            max-width: 1100px;
-            margin: 40px auto;
+            max-width: 95%;
+            margin: 20px auto;
             background-color: #fff;
-            padding: 20px;
+            padding: 15px;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .article {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             border-bottom: 1px solid #ddd;
-            padding-bottom: 20px;
+            padding-bottom: 15px;
         }
 
         .article h2 {
-            font-size: 26px;
+            font-size: 20px;
             margin-bottom: 10px;
             color: #003a5e;
         }
 
         .article .date {
             color: #999;
-            font-size: 14px;
-            margin-bottom: 15px;
+            font-size: 12px;
+            margin-bottom: 10px;
         }
 
         .article .content {
-            font-size: 18px;
+            font-size: 16px;
             color: #555;
         }
 
         .article .content p {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         /* フッター */
         .footer {
             background-color: #003a5e;
             color: #fff;
-            padding: 20px;
+            padding: 15px;
             text-align: center;
-            font-size: 14px;
-            margin-top: 40px;
+            font-size: 12px;
+            margin-top: 20px;
         }
 
         .footer a {
             color: #fff;
             text-decoration: none;
-            font-size: 14px;
         }
 
         .footer a:hover {
             text-decoration: underline;
         }
 
-        /* リスポンシブ */
+        /* スマホ用の調整 */
         @media (max-width: 768px) {
             .header {
                 flex-direction: column;
-                text-align: center;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .header .logo h1 {
+                font-size: 20px;
             }
 
             .nav ul {
                 flex-direction: column;
-            }
-
-            .nav ul li {
-                margin-bottom: 10px;
+                gap: 5px;
             }
 
             .main-content {
-                padding: 15px;
+                padding: 10px;
             }
 
             .article h2 {
-                font-size: 22px;
+                font-size: 18px;
             }
 
             .article .content {
-                font-size: 16px;
+                font-size: 14px;
+            }
+
+            .footer {
+                font-size: 10px;
+                padding: 10px;
             }
         }
     </style>
@@ -153,7 +161,6 @@
     </header>
 
     <main class="main-content">
-    
         <article class="article">
             <a href="index1.html">
                 <h2>SNS記事開設【僕から一言】</h2>
@@ -166,7 +173,7 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2024 SNS記事 <a href="#"></a></p>
+        <p>&copy; 2024 SNS記事 <a href="#">プライバシーポリシー</a></p>
     </footer>
 </body>
 </html>
