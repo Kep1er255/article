@@ -19,14 +19,15 @@
         .header {
             background-color: #003a5e;
             color: #fff;
-            padding: 20px;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .header .logo h1 {
-            font-size: 30px;
+            font-size: 24px;
             margin: 0;
         }
 
@@ -34,17 +35,21 @@
             list-style: none;
             padding: 0;
             margin: 0;
-            display: flex;
+            display: flex; /* 常に横並び */
+            gap: 20px; /* 各項目の間隔 */
+            overflow-x: auto; /* スクロールを許可 */
+            -webkit-overflow-scrolling: touch; /* スクロールのなめらかさを向上 */
         }
 
         .nav ul li {
-            margin-right: 30px;
+            margin: 0;
+            flex-shrink: 0; /* 項目が縮まらないようにする */
         }
 
         .nav ul li a {
             color: #fff;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .nav ul li a:hover {
@@ -101,29 +106,49 @@
         .footer a {
             color: #fff;
             text-decoration: none;
-            font-size: 14px;
         }
 
         .footer a:hover {
             text-decoration: underline;
         }
 
-        /* リスポンシブ対応 */
+        /* リスポンシブ */
         @media (max-width: 768px) {
             .header {
-                flex-direction: column;
+                flex-wrap: wrap; /* ヘッダー全体を折り返し可能に */
+                gap: 10px;
+            }
+
+            .header .logo {
+                width: 100%; /* ロゴを横幅いっぱいにする */
                 text-align: center;
             }
 
             .nav ul {
-                flex-direction: row;
                 flex-wrap: nowrap; /* 横並びを維持 */
-                justify-content: center;
                 overflow-x: auto; /* 横スクロールを許可 */
+                gap: 15px;
             }
 
-            .nav ul li {
-                margin-right: 10px;
+            .nav ul li a {
+                font-size: 12px;
+            }
+
+            .main-content {
+                padding: 15px;
+            }
+
+            .article h2 {
+                font-size: 22px;
+            }
+
+            .article .content {
+                font-size: 16px;
+            }
+
+            .footer {
+                font-size: 12px;
+                padding: 10px;
             }
         }
     </style>
@@ -145,20 +170,18 @@
 
     <main class="main-content">
         <article class="article">
-            <a href="index2.html">
+            <a href="index1.html">
                 <h2>SNS記事開設【僕から一言】</h2>
             </a>
             <p class="date">2024年12月1日 23:11</p>
             <div class="content">
                 <p>ご覧いただきありがとうございます。これから毎日SNSに関しての記事を書いていきたいと思います。</p>
-                <p>この連載では、SNSが私たちの日常に与える影響について、いくつかの切り口から分析していきます。SNSの利用者数や、その利用者の心理、そしてSNSが引き起こす社会的影響について深堀りしていく予定です。</p>
-                <p>今後ともよろしくお願いします。</p>
             </div>
         </article>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2024 SNS記事 <a href="#"></a></p>
+        <p>&copy; 2024 SNS記事 <a href="#">プライバシーポリシー</a></p>
     </footer>
 </body>
 </html>
